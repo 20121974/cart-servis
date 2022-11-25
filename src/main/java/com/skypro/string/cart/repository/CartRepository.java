@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
+
 @SessionScope
 public class CartRepository {
     private final List<Integer> idList = new ArrayList<>();

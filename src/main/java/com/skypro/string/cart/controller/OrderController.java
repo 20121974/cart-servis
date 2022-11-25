@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+
 @RestController
 @RequestMapping("/store/order")
 
@@ -20,7 +21,8 @@ public class OrderController {
     @GetMapping("/add")
     public String add(@RequestParam("id") List<Integer> ids) {//добавлять
         this.cartService.addToCart(ids);
-        return "Приняты идентификаторы -"  + ids;    }
+        return "Приняты идентификаторы -" + ids;
+    }
 
     @GetMapping("/get")
     public List<Integer> get() {//получить
